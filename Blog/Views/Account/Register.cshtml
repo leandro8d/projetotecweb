@@ -1,0 +1,66 @@
+﻿@model Blog.Models.RegisterViewModel
+@{
+    ViewBag.Title = "Registre-se";
+}
+
+<h2>@ViewBag.Title.</h2>
+<div ng-controller="contacontroller">
+    @using (Html.BeginForm("CriarUsuario", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+    {
+        @Html.AntiForgeryToken()
+        <h4>Crie uma nova conta.</h4>
+        <hr />
+        @Html.ValidationSummary("", new { @class = "text-danger" })
+        <div class="form-group">
+            <label class="col-md-2 control-label">E-mail</label>
+            <div class="col-md-10">
+                <input ng-model="usuario.Email" type="text" class="form-control" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-2 control-label">Nome</label>
+            <div class="col-md-10">
+                <input ng-model="usuario.Nome" type="text" class="form-control" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-2 control-label">Senha</label>
+            <div class="col-md-10">
+                <input ng-model="usuario.Senha" type="password" class="form-control" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-md-2 control-label">Confirmar Senha</label>
+            <div class="col-md-10">
+                <input type="password" class="form-control" />
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <label class="col-md-2 control-label">Perfil</label>
+            <div class="col-md-10">
+                <select ng-model="usuario.IdPerfil" class="form-control">
+                    <option ng-value="1">Autor</option>
+                    <option ng-value="2">Administrador</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="button" ng-click="criar()" class="btn btn-default" value="Registrar-se" />
+            </div>
+        </div>
+
+
+
+    }
+</div>
+
+
+
+@section Scripts {
+
+}

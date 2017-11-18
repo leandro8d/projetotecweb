@@ -1,0 +1,31 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<div ng-controller="homecontroller">
+    <div class="panel panel-default">
+        <div class="panel-heading">Panel heading without title</div>
+        <div class="panel-body">
+           <table>
+               <tr ng-repeat="usuario in usuarios ">
+                   <td>
+                       {{usuario}}
+                   </td>
+               </tr>
+
+           </table>
+
+            <input ng-model="nomeUsuario" />
+            <button type="button" ng-click="adicionarUsuario(nomeUsuario)">adicionar</button>
+        </div>
+    </div>
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">Panel title</h3>
+        </div>
+        <div class="panel-body">
+            Panel content
+        </div>
+    </div>
+</div>
+

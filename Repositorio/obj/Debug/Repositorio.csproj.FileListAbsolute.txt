@@ -1,0 +1,10 @@
+C:\Users\Leandro\documents\visual studio 2017\Projects\Blog\Repositorio\bin\Debug\Repositorio.dll.config
+C:\Users\Leandro\documents\visual studio 2017\Projects\Blog\Repositorio\bin\Debug\Repositorio.dll
+C:\Users\Leandro\documents\visual studio 2017\Projects\Blog\Repositorio\bin\Debug\Repositorio.pdb
+C:\Users\Leandro\documents\visual studio 2017\Projects\Blog\Repositorio\bin\Debug\EntityFramework.dll
+C:\Users\Leandro\documents\visual studio 2017\Projects\Blog\Repositorio\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Leandro\documents\visual studio 2017\Projects\Blog\Repositorio\bin\Debug\EntityFramework.xml
+C:\Users\Leandro\documents\visual studio 2017\Projects\Blog\Repositorio\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Leandro\documents\visual studio 2017\Projects\Blog\Repositorio\obj\Debug\Repositorio.csprojResolveAssemblyReference.cache
+C:\Users\Leandro\documents\visual studio 2017\Projects\Blog\Repositorio\obj\Debug\Repositorio.dll
+C:\Users\Leandro\documents\visual studio 2017\Projects\Blog\Repositorio\obj\Debug\Repositorio.pdb
