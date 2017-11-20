@@ -2,13 +2,13 @@
     ViewBag.Title = "Home Page";
 }
 <div ng-controller="homecontroller">
-    <div class="panel panel-default">
-        <div class="panel-heading">Panel heading without title</div>
+    <div ng-repeat="postagem in postagens " class="panel panel-default">
+        <div  class="panel-heading">{{postagem.TITULO}}</div>
         <div class="panel-body">
            <table>
-               <tr ng-repeat="usuario in usuarios ">
+               <tr >
                    <td>
-                       {{usuario}}
+                       {{postagem.DESCRICAO}}
                    </td>
                </tr>
 

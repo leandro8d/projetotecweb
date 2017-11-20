@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewBag.Title = "Cadastro de Postagem";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div ng-controller="postagemcontroller">
+    @Html.AntiForgeryToken()
+    <h4>Crie uma nova conta.</h4>
+    <hr />
+    @Html.ValidationSummary("", new { @class = "text-danger" })
+    <div class="form-group">
+        <label class="col-md-2 control-label">Titulo</label>
+        <div class="col-md-10">
+            <input ng-model="post.TITULO" type="text" class="form-control" />
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-md-2 control-label">Descricao</label>
+        <div class="col-md-10">
+            <textarea ng-model="post.DESCRICAO" type="text" rows="5" class="form-control"></textarea>
+        </div>
+    </div>
+
+
+
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="button" ng-click="criar()" class="btn btn-default" value="Registrar-se" />
+        </div>
+    </div>
+
+
+
+</div>

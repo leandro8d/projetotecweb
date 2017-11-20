@@ -25,6 +25,9 @@ namespace Blog
             bundles.Add(new ScriptBundle("~/bundles/conta").Include(
                       "~/Scripts/Conta/contacontroller.js"));
 
+            bundles.Add(new ScriptBundle("~/bundles/postagem").Include(
+              "~/Scripts/Postagem/postagemcontroller.js"));
+
             // Use a versão em desenvolvimento do Modernizr para desenvolver e aprender. Em seguida, quando estiver
             // ready for production, use the build tool at https://modernizr.com to pick only the tests you need.
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(

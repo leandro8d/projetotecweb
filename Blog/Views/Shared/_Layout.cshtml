@@ -27,7 +27,7 @@
                     <li>@Html.ActionLink("Sobre", "About", "Home")</li>
                     <li>@Html.ActionLink("Contato", "Contact", "Home")</li>
                     <li>@Html.ActionLink("Cadastrar Autores", "CadastroAutor", "CadastroAutor")</li>
-                </ul>
+                    <li>@(Session["Administrador"] == null || (bool)Session["Administrador"] == false ? "class=hidden" : "" )>@Html.ActionLink("Cadastro de Postagem", "Index", "CadastroPost")</li>
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
@@ -46,6 +46,7 @@
     @Scripts.Render("~/bundles/bootstrap")
     @Scripts.Render("~/bundles/home")
     @Scripts.Render("~/bundles/conta")
+    @Scripts.Render("~/bundles/postagem")
     @RenderSection("scripts", required: false)
 </body>
 </html>

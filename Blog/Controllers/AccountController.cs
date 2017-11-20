@@ -10,6 +10,7 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using Blog.Models;
 using Repositorio;
+using System.Web.Helpers;
 
 namespace Blog.Controllers
 {
@@ -24,6 +25,12 @@ namespace Blog.Controllers
             return View();
         }
 
+        [AllowAnonymous]
+        public ActionResult Login()
+        {
+            return View();
+        }
+
         [HttpPost]
         [AllowAnonymous]
         public  void CriarUsuario(Usuario usuario)
@@ -32,6 +39,33 @@ namespace Blog.Controllers
             // Solicitar um redirecionamento para o provedor de logon externo
             modelo.USUARIO.Add(new USUARIO {NOME= usuario.Nome,EMAIL=usuario.Email,SENHA = usuario.Senha,ID_PERFIL = usuario.IdPerfil });
             modelo.SaveChanges();
+        }
+
+
+        [HttpPost]
+        [AllowAnonymous]
+        public JsonResult Logar(Usuario usuario)
+        {
+            var user = modelo.USUARIO.Where(b => b.EMAIL.Equals(usuario.Email) && b.SENHA.Equals(usuario.Password)).FirstOrDefault();
+
+            if (user == null)
+                return new JsonResult { Data="email ou senha invalida" };
+            else
+            {
+                Session["IdUsuario"] = user.ID_USUARIO;
+                Session["IdPerfil"] = user.ID_PERFIL;
+                return new JsonResult { Data = "Logado com Sucesso" };
+            }
+        }
+
+
+        [HttpPost]
+        [AllowAnonymous]
+        public JsonResult Logout(Usuario usuario)
+        {
+            Session["IdUsuario"] = null;
+            Session["IdPerfil"] = null;
+            return new JsonResult { Data = "Logado com Sucesso" };
         }
 
     }
