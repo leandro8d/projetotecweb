@@ -267,7 +267,7 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\CadastroAutor\View.cshtml" />
-    <Content Include="Views\CadastroPost\index.cshtml" />
+    <Content Include="Views\Postagem\index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

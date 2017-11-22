@@ -27,7 +27,7 @@
                     <li>@Html.ActionLink("Sobre", "About", "Home")</li>
                     <li>@Html.ActionLink("Contato", "Contact", "Home")</li>
                     <li>@Html.ActionLink("Cadastrar Autores", "CadastroAutor", "CadastroAutor")</li>
-                    <li>@(Session["Administrador"] == null || (bool)Session["Administrador"] == false ? "class=hidden" : "" )>@Html.ActionLink("Cadastro de Postagem", "Index", "CadastroPost")</li>
+                    <li>@(Session["Administrador"] == null || (bool)Session["Administrador"] == false ? "class=hidden" : "" )>@Html.ActionLink("Cadastro de Postagem", "Index", "Postagem")</li>
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
